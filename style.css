@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ff758c,
+        #ff7eb3,
+        #a18cd1
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 520px;
+}
+
+
+/* Pages */
+
+.page {
+    display: none;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    animation: appear 0.8s ease;
+}
+
+
+.page.active {
+    display: block;
+}
+
+
+/* Page Animation */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* Cake */
+
+.cake {
+    font-size: 80px;
+
+    animation: bounce 1.5s infinite;
+}
+
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+/* Headings */
+
+h1 {
+    margin: 20px 0 10px;
+
+    font-size: 36px;
+
+    color: #e91e63;
+}
+
+
+h2 {
+    color: #8e24aa;
+
+    margin-bottom: 15px;
+}
+
+
+/* Message */
+
+.message {
+    margin: 20px 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* Buttons */
+
+button {
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ff4081,
+        #e91e63
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(233, 30, 99, 0.3);
+}
+
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 12px 25px rgba(233, 30, 99, 0.4);
+}
+
+
+/* Heart */
+
+.heart {
+    font-size: 80px;
+
+    animation: heartbeat 1s infinite;
+}
+
+
+.big-heart {
+    font-size: 100px;
+
+    animation: heartbeat 1s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* Buttons Section */
+
+.buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.yes {
+    background: #e91e63;
+}
+
+
+.no {
+    background: #777;
+}
+
+
+/* Final Message */
+
+#finalMessage {
+    margin: 25px 0;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+.stars {
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .page {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .cake {
+        font-size: 65px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+}
